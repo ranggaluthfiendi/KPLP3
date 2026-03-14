@@ -60,7 +60,6 @@
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Celcius", "Fahrenheit", "Kelvin", "Reamur" });
             comboBox1.Location = new Point(316, 239);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(112, 33);
@@ -70,7 +69,6 @@
             // comboBox2
             // 
             comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "Celcius", "Fahrenheit", "Kelvin", "Reamur" });
             comboBox2.Location = new Point(316, 403);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(112, 33);

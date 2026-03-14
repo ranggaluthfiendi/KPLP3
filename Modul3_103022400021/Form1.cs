@@ -37,7 +37,60 @@ namespace Modul3_103022400021
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            if (comboBox1.SelectedIndex == -1 || comboBox2.SelectedIndex == -1)
+            {
+                MessageBox.Show("Pilih satuan terlebih dahulu!");
+                return;
+            }
+
+            if (textBox1.Text == "")
+            {
+                MessageBox.Show("Masukkan angka yang valid");
+                return;
+            }
+
+            double nilai = Convert.ToDouble(textBox1.Text);
+            double celcius = 0;
+            double hasil = 0;
+
+            string awal = comboBox1.Text;
+            string akhir = comboBox2.Text;
+
+            if (awal == "Celcius")
+            {
+                celcius = nilai;
+            }
+            else if (awal == "Fahreinheit")
+            {
+                celcius = (nilai - 32) * 5 / 9;
+            }
+            else if (awal == "Kelvin")
+            {
+                celcius = nilai - 273.15;
+            }
+            else if (awal == "Reamur")
+            {
+                celcius = nilai * 5 / 4;
+            }
+
+            if (akhir == "Celcius")
+            {
+                hasil = celcius;
+            }
+            else if (akhir == "Fahreinheit")
+            {
+                hasil = (celcius * 9 / 5) + 32;
+            }
+            else if (akhir == "Kelvin")
+            {
+                hasil = celcius + 273.15;
+            }
+            else if (akhir == "Reamur")
+            {
+                hasil = celcius * 4 / 5;
+            }
+
+            textBox2.Text = hasil.ToString();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
